@@ -17,7 +17,7 @@ const NEWS = [
   {
     date: "2026.6.25",
     text: "医学書院「看護教育」焦点記事”看護教育で「考え方」をどう育てるか”が出版されました。",
-    link: "",
+    link: "https://www.igaku-shoin.co.jp/journal/detail/42398",
   },
   {
     date: "2026.3.20",
@@ -42,8 +42,8 @@ const NEWS = [
   },
   {
     date: "2025.11.26",
-    text: "International Journal of Medical Educationに熟達看護師の不安調整についての論文が掲載されました。",
-    link: "", // 論文URL（DOIなど）を入れると [論文] リンクが出ます
+    text: "International Journal of Medical Educationに熟達看護師の不安調整についての論文が掲載されました。*読み込みに少し時間がかかります",
+    link: "https://www.ijme.net/archive/16/emotion-regulation-strategies-of-oncology-nurses/", // 論文URL（DOIなど）を入れると [論文] リンクが出ます
     linkLabel: "論文",
   },
 ];
