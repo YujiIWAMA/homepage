@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>岩間裕司のページ</title>
+  <meta name="description" content="知識科学系 看護研究者">
+  <meta property="og:title" content="岩間裕司のページ">
+  <meta property="og:description" content="知識科学系 看護研究者">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="岩間 裕司">
+  <!-- 独自ドメインが決まったら絶対URLに書き換えると、SNSでの画像表示が確実になります -->
+  <meta property="og:image" content="images/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <header class="hero">
+    <h1><a href="index.html">岩間裕司のページ</a></h1>
+  </header>
+  <nav class="gnav">
+    <a href="index.html" aria-current="page">ホーム</a>
+    <a href="metacognition.html">メタ認知による<br>不安調整とは？</a>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- ========== プロフィール（ここは直接書き換え） ========== -->
+    <div class="profile">
+      <span class="label">プロフィール</span>
+      <p class="name">岩間裕司<br>知識科学博士／看護師・保健師</p>
+
+      <p>
+        防衛医科大学校<br>
+        医学教育部 看護学科 地域・在宅看護学講座　講師<br>
+        研究キーワード：メタ認知、インストラクショナルデザイン、構成的学習、知識科学
+      </p>
+      <p>
+        慶應義塾大学看護医療学部卒(2012).<br>
+        北陸先端科学技術大学院大学博士後期課程修了.<br>
+        慶應義塾大学病院 集中治療室・泌尿器科・化学療法病床にて看護師として約10年勤務.<br>
+        てとめ訪問看護ステーション江戸川を経て現職.
+      </p>
+      <p>「看護師の優れた暗黙知」をどうしたら他の看護師と共有し、学習可能な形にできるか？そしてそれをどう評価するか？に関心があります.</p>
+      <p>趣味はバイク（Kawasaki・ベスパ・BMW）、ラーメン、読書、靴磨き</p>
+
+      <!-- ↓ researchmapのご自身のURLに置き換えてください -->
+      <a class="btn" href="https://researchmap.jp/" target="_blank" rel="noopener">詳しくはこちら</a>
+    </div>
+
+    <div class="photos">
+      <img src="images/profile.jpg" alt="岩間裕司">
+      <img src="images/pooaru.jpg" alt="愛犬ぷーある">
+    </div>
+    <p class="caption">私と愛犬（ぷーある）</p>
+
+    <!-- ========== 以下の中身は content.js で編集 ========== -->
+    <section class="block">
+      <h2>News</h2>
+      <p class="sub">お知らせ</p>
+      <ul class="news" id="news-top"></ul>
+      <a class="more" id="past-link" href="news.html">過去のお知らせ</a>
+    </section>
+
+    <section class="block">
+      <h2>Project</h2>
+      <p class="sub">研究テーマ</p>
+      <div class="cards" id="projects"></div>
+    </section>
+
+    <section class="block">
+      <h2>Portfolio</h2>
+      <p class="sub">成果物等</p>
+      <div class="cards" id="portfolio"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <a class="top" href="#top">トップへ戻る</a>
+    <p>Yuji Iwama All rights reserved</p>
+    <p>初版公開日: 2025.11.18</p>
+    <p>最終更新日: <span class="last-updated"></span></p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="render.js"></script>
+</body>
+</html>

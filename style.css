@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600&display=swap");
+
+:root {
+  --ink: #222;
+  --sub: #555;
+  --line: #bdbdbd;
+  --bg: #fff;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* ヘッダー */
+.hero {
+  max-width: var(--max);
+  margin: 40px auto 0;
+  background: linear-gradient(90deg, #1e1e1e 0%, #6b6b6b 55%, #a9a9a9 100%);
+  color: #fff;
+  padding: 36px 8%;
+}
+.hero h1 { margin: 0; font-size: clamp(28px, 4.5vw, 44px); font-weight: 700; letter-spacing: .08em; }
+.hero h1 a { text-decoration: none; }
+
+/* プロフィール */
+.profile { padding: 40px 8% 20px; }
+.label { display: inline-block; font-weight: 700; font-size: 14px; border-bottom: 1px solid var(--ink); margin-bottom: 12px; }
+.profile .name { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .08em; line-height: 1.7; }
+.profile p { font-size: 13px; color: var(--sub); margin: 0 0 18px; }
+.btn {
+  display: inline-block; background: #111; color: #fff; text-decoration: none;
+  font-size: 13px; padding: 6px 28px; border-radius: 8px; transition: opacity .2s;
+}
+.btn:hover { opacity: .75; }
+
+.photos { display: flex; justify-content: center; gap: 56px; margin: 32px 0 12px; flex-wrap: wrap; }
+.photos img { width: 180px; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; }
+.caption { text-align: center; font-weight: 500; letter-spacing: .1em; margin: 0 0 40px; }
+
+/* セクション */
+section.block { border-top: 1px solid var(--line); padding: 28px 3% 48px; }
+.block h2 { font-family: "Outfit", sans-serif; font-weight: 500; font-size: 26px; margin: 0; line-height: 1.2; }
+.block .sub { font-size: 13px; font-weight: 700; margin: 2px 0 24px; }
+
+.news { list-style: none; margin: 0; padding: 0 0 0 4%; font-size: 14px; }
+.news li { display: flex; gap: 12px; margin-bottom: 10px; }
+.news time { flex: none; }
+.news-link { margin-left: 4px; }
+.more { display: inline-block; margin: 20px 0 0 4%; font-size: 14px; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 6px; }
+.card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 8px; }
+.card h3 { font-size: 13px; text-align: center; margin: 14px 8px 10px; line-height: 1.6; }
+.card p { font-size: 12px; color: var(--sub); margin: 0 12px; text-align: center; line-height: 1.9; }
+#portfolio .card img { object-fit: contain; background: #fafafa; }
+
+/* フッター */
+footer {
+  max-width: var(--max); margin: 0 auto 40px; background: #222; color: #fff;
+  text-align: center; padding: 28px 20px 36px;
+}
+footer .top { font-size: 12px; text-decoration: none; display: inline-block; margin-bottom: 28px; }
+footer p { margin: 0; font-family: "Outfit", "Noto Sans JP", sans-serif; letter-spacing: .06em; font-size: 14px; line-height: 1.5; }
+
+/* 過去のお知らせページ */
+.page { padding: 40px 6% 60px; min-height: 50vh; }
+.page h2 { font-size: 18px; margin: 0 0 20px; }
+.page .news { padding: 0; }
+
+@media (max-width: 720px) {
+  .hero { margin-top: 0; padding: 28px 20px; }
+  .profile { padding: 32px 20px 12px; }
+  .photos { gap: 16px; }
+  .photos img { width: 42vw; }
+  .cards { grid-template-columns: 1fr; gap: 32px; }
+  .news { padding: 0; }
+  .news li { flex-direction: column; gap: 0; }
+  .more { margin-left: 0; }
+  footer { margin-bottom: 0; }
+}
+.page .more { margin-left: 0; }
+
+/* グローバルナビ */
+.gnav {
+  max-width: var(--max); margin: 0 auto; display: flex; justify-content: flex-end;
+  align-items: center; gap: 36px; padding: 14px 6%; font-size: 12px; line-height: 1.4;
+}
+.gnav a { text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+.gnav a:hover, .gnav a[aria-current="page"] { border-bottom-color: var(--ink); }
+
+/* 解説ページ */
+.article { max-width: 920px; }
+.a-sec { padding: 40px 4% 24px; }
+.eyebrow { font-size: 16px; color: #777; font-weight: 500; letter-spacing: .1em; margin: 0 0 6px; }
+.lead { font-size: clamp(22px, 3vw, 28px); margin: 0; letter-spacing: .08em; line-height: 1.5; }
+.lead-sub { font-size: 17px; font-weight: 700; margin: 4px 0 18px; letter-spacing: .06em; }
+.title { font-size: 22px; margin: 0 0 16px; letter-spacing: .08em; padding-left: .6em; }
+.small { font-size: 13px; color: var(--sub); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 40px; }
+.split p { font-size: 14px; letter-spacing: .04em; }
+.split img { border-radius: 6px; width: 100%; }
+.def { font-size: 15px; padding-left: .6em; letter-spacing: .04em; }
+
+.steps-band { background: #f3f3f3; padding: 36px 0 28px; margin-top: 16px; }
+.steps-band .wrap { padding-left: calc(4% + 20px); }
+.steps { list-style: none; padding: 0; margin: 28px 0 0; counter-reset: s; }
+.steps > li { background: #fff; border-radius: 8px; padding: 18px 22px; margin-bottom: 14px; }
+.steps h3 { font-size: 15px; margin: 0 0 6px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.steps h3 span { font-family: "Outfit", sans-serif; font-size: 13px; background: #222; color: #fff; padding: 1px 10px; border-radius: 20px; font-weight: 500; }
+.steps p { font-size: 13.5px; margin: 0 0 6px; color: #333; }
+.steps ul { font-size: 13.5px; margin: 4px 0 8px; padding-left: 1.2em; }
+
+.faq details { border-bottom: 1px solid #555; padding: 4px 0 10px; margin-bottom: 18px; }
+.faq summary {
+  list-style: none; cursor: pointer; font-weight: 700; font-size: 16px; padding: 10px 32px 10px 0;
+  position: relative; letter-spacing: .04em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 8px; font-weight: 400; font-size: 20px; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { font-size: 13.5px; margin: 4px 0 0; color: #333; }
+
+@media (max-width: 720px) {
+  .gnav { justify-content: center; gap: 24px; padding: 12px 16px; }
+  .split { grid-template-columns: 1fr; gap: 20px; }
+  .a-sec { padding: 32px 0 16px; }
+  .steps-band .wrap { padding-left: 20px; }
+  .title, .def { padding-left: 0; }
+}
