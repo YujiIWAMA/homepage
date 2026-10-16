@@ -32,7 +32,7 @@ const NEWS = [
   {
     date: "2025.12.6",
     text: "第45回JANS 問いのリストをアップしました。ダウンロードしてご活用ください。",
-    link: "", // 例: "files/question-list.pdf"（filesフォルダにPDFを置く）
+    link: "問いのリスト.pdf", // 例: "files/question-list.pdf"（filesフォルダにPDFを置く）
     linkLabel: "ダウンロード",
   },
   {
