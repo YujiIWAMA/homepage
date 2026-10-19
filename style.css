@@ -139,3 +139,10 @@ footer p { margin: 0; font-family: "Outfit", "Noto Sans JP", sans-serif; letter-
   .steps-band .wrap { padding-left: 20px; }
   .title, .def { padding-left: 0; }
 }
+
+/* 成果物カードのリンク */
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card a img { transition: opacity .2s; }
+.card a:hover img { opacity: .8; }
+.card .card-link { margin-top: 10px; font-size: 13px; font-weight: 700; }

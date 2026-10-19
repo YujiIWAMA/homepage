@@ -12,10 +12,11 @@
 
   function card(c) {
     const img = `<img src="${c.image}" alt="" loading="lazy">`;
-    const media = c.link
-      ? `<a href="${c.link}" target="_blank" rel="noopener">${img}</a>`
-      : img;
-    return `<article class="card">${media}<h3>${c.title}</h3><p>${c.body}</p></article>`;
+    if (!c.link) return `<article class="card">${img}<h3>${c.title}</h3><p>${c.body}</p></article>`;
+    const a = (inner) => `<a href="${c.link}" target="_blank" rel="noopener">${inner}</a>`;
+    const label = c.linkLabel || "開く";
+    return `<article class="card">${a(img)}<h3>${a(c.title)}</h3><p>${c.body}</p>` +
+      `<p class="card-link">${a(label + " →")}</p></article>`;
   }
 
   const $ = (id) => document.getElementById(id);
