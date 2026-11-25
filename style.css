@@ -50,6 +50,7 @@ body {
   overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
 
@@ -221,6 +222,12 @@ footer p { margin: 0; font-family: var(--latin); letter-spacing: .06em; font-siz
 /* ===== 字体の割り当て ===== */
 .site-title, .intro .name, .intro .interest, .card h3, .page h2,
 .lead, .lead-sub, .title, .steps h3, .faq summary { font-family: var(--serif); }
+
+/* 英語版の調整 */
+html[lang="en"] .intro .name { letter-spacing: .03em; }
+html[lang="en"] .site-title { letter-spacing: .04em; }
+html[lang="en"] .intro .role, html[lang="en"] .card h3 { letter-spacing: .01em; }
+html[lang="en"] body { letter-spacing: 0; }
 
 /* 写真は所属ボックスの高さから始める（PCのみ） */
 @media (min-width: 861px) { .photos { margin-top: 142px; } }
