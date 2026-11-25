@@ -88,4 +88,4 @@ const PORTFOLIO = [
   },
 ];
 
-const LAST_UPDATED = "2026.10.16";
+const LAST_UPDATED = "2026.11.25";
