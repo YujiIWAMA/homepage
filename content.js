@@ -67,8 +67,8 @@ const PROJECTS = [
 ];
 
 // 写真なしで簡単に紹介する進行中のプロジェクト（研究テーマ欄のカードの下にリスト表示）
-const OTHER_LEAD = "どの研究にも通底しているのは，人の認知をどのように明らかにし，その人が自ら成長していくための支援をどうつくるか，という問いです．";
-const THOUGHT_LABEL = "研究にかける想い";
+const OTHER_LEAD = "";
+const THOUGHT_LABEL = "";
 const OTHER_PROJECTS = [
   {
     title: "退役自衛官のQOLと健康関連要因に関する調査研究",
