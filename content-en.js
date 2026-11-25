@@ -65,6 +65,34 @@ const PROJECTS = [
   },
 ];
 
+// Ongoing projects listed briefly without images (shown below the project cards)
+const OTHER_LEAD = "What runs through all of my research is one question: how can we make human cognition visible, and how can we design support that helps people grow on their own?";
+const THOUGHT_LABEL = "Why this matters to me";
+const OTHER_PROJECTS = [
+  {
+    title: "Quality of Life and Health-Related Factors Among Retired Self-Defense Forces Personnel",
+    body: "A survey study examining the quality of life of retired SDF personnel and the health factors associated with it.",
+    thought: "Some SDF personnel experience declining health after they retire. What do people who have served for many years need in order to live healthy, happy lives after retirement? Viewing active service and retirement as one continuous life course, this study aims to establish the foundational knowledge needed to support their well-being.",
+  },
+  {
+    title: "A VR Learning Material for Building Primary Survey Skills in Emergency Care",
+    body: "Developing VR-based material through which learners acquire the primary survey — the initial assessment of life-threatening conditions in emergency situations.",
+    thought: "Emergency care is not something that can easily be learned on the job. Amid the commotion of an emergency, what should be assessed first, and how should decisions be made? This material recreates that tense atmosphere and lets learners experience it again and again, so they can focus on their own thinking and judgment.",
+  },
+  {
+    title: "The Question List: A Metacognition-Based Reflection Worksheet",
+    body: "A list of reflective questions, grounded in the ALACT model and metacognition theory, that helps nurses review their daily practice and turn it into more intentional choices (Japanese).",
+    link: "問いのリスト.pdf",
+    linkLabel: "Download",
+    thought: "How do professionals grow from their experience in practice? Experience alone does not become learning; I believe the key is the questions we ask ourselves. The Question List is designed to prompt such self-questioning. Through practice, I am exploring what kinds of metacognitive support help professionals grow.",
+  },
+  {
+    title: "WEAVE: A Support Tool for Drawing Nursing Relational Diagrams",
+    body: "A web tool that helps nursing students build relational diagrams based on PES logic, refined through use in classes.",
+    thought: "When nursing students and novice nurses learn the nursing process, much of their thinking stays in their heads, invisible to those who teach them. WEAVE externalizes that thinking through relational diagrams so it can inform teaching. At the same time, it aims to reveal the implicit learning processes learners follow without noticing, and to find starting points for individualized guidance.",
+  },
+];
+
 const PORTFOLIO = [
   {
     image: "images/portfolio-metacog.jpg",

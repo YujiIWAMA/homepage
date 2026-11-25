@@ -19,11 +19,23 @@
       `<p class="card-link">${a(label + " →")}</p></article>`;
   }
 
+  function otherItem(p) {
+    const link = p.link
+      ? ` <a class="news-link" href="${p.link}" target="_blank" rel="noopener">[${p.linkLabel || "リンク"}]</a>`
+      : "";
+    const thought = p.thought
+      ? `<details class="thought"><summary>${p.thoughtLabel || THOUGHT_LABEL}</summary><p>${p.thought}</p></details>`
+      : "";
+    return `<li><h3>${p.title}</h3><p>${p.body}${link}</p>${thought}</li>`;
+  }
+
   const $ = (id) => document.getElementById(id);
 
   if ($("news-top")) $("news-top").innerHTML = NEWS.slice(0, NEWS_ON_TOP).map(newsItem).join("");
   if ($("news-past")) $("news-past").innerHTML = NEWS.slice(NEWS_ON_TOP).map(newsItem).join("");
   if ($("projects")) $("projects").innerHTML = PROJECTS.map(card).join("");
+  if ($("other-lead") && typeof OTHER_LEAD !== "undefined") $("other-lead").innerHTML = OTHER_LEAD;
+  if ($("other-projects") && typeof OTHER_PROJECTS !== "undefined") $("other-projects").innerHTML = OTHER_PROJECTS.map(otherItem).join("");
   if ($("portfolio")) $("portfolio").innerHTML = PORTFOLIO.map(card).join("");
   document.querySelectorAll(".last-updated").forEach((el) => (el.textContent = LAST_UPDATED));
   if (NEWS.length <= NEWS_ON_TOP && $("past-link")) $("past-link").hidden = true;
