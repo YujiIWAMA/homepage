@@ -80,7 +80,7 @@ const PORTFOLIO = [
   },
   {
     image: "images/portfolio-kanrenzu.jpg",
-    title: "Nursing Care Concept Map Support Tool " WEAVE " (prototype)",
+    title: "Nursing Care Concept Map Support Tool  ' WEAVE ' (prototype)",
     body: "Concept maps are a major hurdle for nursing students and new nurses. Based on the PES format, this tool supports learners in grasping the whole picture of a patient and planning appropriate observation and care.<br><small>(To be released publicly.)</small>",
     link: "",
     linkLabel: "Open the tool",
