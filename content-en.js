@@ -66,8 +66,8 @@ const PROJECTS = [
 ];
 
 // Ongoing projects listed briefly without images (shown below the project cards)
-const OTHER_LEAD = "What runs through all of my research is one question: how can we make human cognition visible, and how can we design support that helps people grow on their own?";
-const THOUGHT_LABEL = "Why this matters to me";
+const OTHER_LEAD = "";
+const THOUGHT_LABEL = "";
 const OTHER_PROJECTS = [
   {
     title: "Quality of Life and Health-Related Factors Among Retired Self-Defense Forces Personnel",
