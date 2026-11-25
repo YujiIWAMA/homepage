@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap");
 
 /* =========================================================
    色とサイズ（ここを変えれば全体の雰囲気が変わります）
@@ -15,6 +15,9 @@
   --shadow: 0 1px 2px rgba(40, 36, 28, .05), 0 6px 20px rgba(40, 36, 28, .06);
   --max: 1040px;        /* ヘッダー・カード並びの最大幅 */
   --read: 720px;        /* 読み物の行の最大幅 */
+  --serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;     /* 見出し（明朝） */
+  --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;  /* 本文（ゴシック） */
+  --latin: "Cormorant Garamond", "Shippori Mincho", serif;                  /* 英字見出し・日付 */
 }
 
 /* 端末がダークモードのときは自動で暗い配色に */
@@ -39,7 +42,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+  font-family: var(--sans);
   font-size: 15px;
   line-height: 1.9;
   letter-spacing: .02em;
@@ -90,8 +93,8 @@ a { color: inherit; }
   padding: 64px 0 56px;
 }
 .label {
-  display: inline-block; font-family: "Outfit", sans-serif; font-weight: 600; font-size: 13px;
-  letter-spacing: .18em; text-transform: uppercase; color: var(--acc); margin-bottom: 10px;
+  display: inline-block; font-family: var(--latin); font-weight: 600; font-size: 15px;
+  letter-spacing: .2em; font-style: italic; color: var(--acc); margin-bottom: 10px;
 }
 .intro .name { margin: 0 0 4px; font-size: clamp(28px, 4vw, 36px); font-weight: 700; letter-spacing: .12em; line-height: 1.3; }
 .intro .role { margin: 0 0 24px; font-size: 15px; font-weight: 700; color: var(--sub); letter-spacing: .06em; }
@@ -100,11 +103,15 @@ a { color: inherit; }
   background: var(--surface); border-radius: 0 8px 8px 0; font-size: 14px; line-height: 1.8;
 }
 .intro .affil strong { font-weight: 700; }
-.intro .affil .kw { display: block; margin-top: 6px; color: var(--sub); font-size: 13px; }
+.intro .affil .kw { display: block; margin-top: 4px; color: var(--sub); font-size: 13px; }
 .intro p { margin: 0 0 16px; max-width: var(--read); }
-.intro .career { font-size: 14px; color: var(--sub); }
 .intro .interest { font-size: 15.5px; font-weight: 500; }
 .intro .hobby { font-size: 14px; color: var(--sub); }
+
+/* 経歴（年＋できごと） */
+.career { list-style: none; margin: 0 0 18px; padding: 0; font-size: 14px; color: var(--sub); max-width: var(--read); }
+.career li { display: grid; grid-template-columns: 4em 1fr; gap: 10px; line-height: 1.75; padding: 2px 0; }
+.career time { font-family: var(--latin); font-weight: 600; font-size: 16px; color: var(--acc); font-variant-numeric: lining-nums; }
 
 .btn {
   display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;
@@ -125,7 +132,7 @@ a { color: inherit; }
    ========================================================= */
 section.block { border-top: 1px solid var(--line); padding: 48px 0 56px; }
 .block-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px; }
-.block h2 { font-family: "Outfit", sans-serif; font-weight: 600; font-size: 28px; margin: 0; line-height: 1.2; letter-spacing: .02em; }
+.block h2 { font-family: var(--latin); font-weight: 600; font-style: italic; font-size: 34px; margin: 0; line-height: 1.2; letter-spacing: .02em; }
 .block .sub { font-size: 13px; font-weight: 700; color: var(--sub); margin: 0; letter-spacing: .1em; }
 
 /* お知らせ */
@@ -135,7 +142,7 @@ section.block { border-top: 1px solid var(--line); padding: 48px 0 56px; }
   padding: 14px 0; border-bottom: 1px dashed var(--line);
 }
 .news li:first-child { padding-top: 0; }
-.news time { font-family: "Outfit", sans-serif; font-weight: 500; color: var(--acc); letter-spacing: .04em; }
+.news time { font-family: var(--latin); font-size: 16px; font-weight: 600; color: var(--acc); letter-spacing: .04em; font-variant-numeric: lining-nums; }
 .news-link { margin-left: 4px; color: var(--acc); font-weight: 500; }
 .more { display: inline-block; margin-top: 20px; font-size: 14px; color: var(--acc); font-weight: 500; }
 .more::after { content: " →"; }
@@ -168,7 +175,7 @@ footer .top {
   padding: 6px 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink);
 }
 footer .top:hover { background: var(--surface); }
-footer p { margin: 0; font-family: "Outfit", "Noto Sans JP", sans-serif; letter-spacing: .06em; font-size: 13px; line-height: 1.8; }
+footer p { margin: 0; font-family: var(--latin); letter-spacing: .06em; font-size: 14px; line-height: 1.8; font-variant-numeric: lining-nums; }
 
 /* =========================================================
    過去のお知らせページ
@@ -197,7 +204,7 @@ footer p { margin: 0; font-family: "Outfit", "Noto Sans JP", sans-serif; letter-
 .steps { list-style: none; padding: 0; margin: 28px 0 0; counter-reset: s; }
 .steps > li { background: var(--surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 14px; box-shadow: var(--shadow); }
 .steps h3 { font-size: 16px; margin: 0 0 6px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
-.steps h3 span { font-family: "Outfit", sans-serif; font-size: 13px; background: var(--acc); color: #fff; padding: 1px 12px; border-radius: 20px; font-weight: 500; }
+.steps h3 span { font-family: var(--latin); font-size: 14px; font-style: italic; background: var(--acc); color: #fff; padding: 1px 12px; border-radius: 20px; font-weight: 500; }
 .steps p { font-size: 14px; margin: 0 0 6px; }
 .steps ul { font-size: 14px; margin: 4px 0 8px; padding-left: 1.2em; }
 
@@ -210,6 +217,13 @@ footer p { margin: 0; font-family: "Outfit", "Noto Sans JP", sans-serif; letter-
 .faq summary::after { content: "+"; position: absolute; right: 4px; top: 8px; font-weight: 400; font-size: 22px; color: var(--acc); }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { font-size: 14.5px; margin: 4px 0 0; color: var(--sub); }
+
+/* ===== 字体の割り当て ===== */
+.site-title, .intro .name, .intro .interest, .card h3, .page h2,
+.lead, .lead-sub, .title, .steps h3, .faq summary { font-family: var(--serif); }
+
+/* 写真は所属ボックスの高さから始める（PCのみ） */
+@media (min-width: 861px) { .photos { margin-top: 142px; } }
 
 /* =========================================================
    タブレット・スマホ
@@ -230,7 +244,7 @@ footer p { margin: 0; font-family: "Outfit", "Noto Sans JP", sans-serif; letter-
   .intro { padding-top: 28px; }
   .intro .affil { font-size: 13.5px; }
   section.block { padding: 36px 0 40px; }
-  .block h2 { font-size: 24px; }
+  .block h2 { font-size: 28px; }
   .news li { grid-template-columns: 1fr; gap: 2px; }
   .cards { grid-template-columns: 1fr; gap: 20px; }
   .split { grid-template-columns: 1fr; gap: 20px; }
