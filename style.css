@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+/* フォント：日本語は端末に入っている明朝・ゴシックを使う（表示を速くするため）．
+   英字見出し用の Cormorant Garamond だけ各HTMLの <head> で読み込み */
 
 /* =========================================================
    色とサイズ（ここを変えれば全体の雰囲気が変わります）
@@ -10,14 +11,14 @@
   --ink: #2b2e33;       /* 本文の文字色（真っ黒より柔らかい墨色） */
   --sub: #5d6168;       /* 補足の文字色 */
   --line: #dedad1;      /* 罫線 */
-  --acc: #3f7f7a;       /* 差し色（卒業研究ガイドの青緑に合わせた色） */
+  --acc: #36716c;       /* 差し色（青緑．背景との明暗差が足りるよう少し濃く） */
   --acc-soft: #e3eeec;
   --shadow: 0 1px 2px rgba(40, 36, 28, .05), 0 6px 20px rgba(40, 36, 28, .06);
   --max: 1040px;        /* ヘッダー・カード並びの最大幅 */
   --read: 720px;        /* 読み物の行の最大幅 */
-  --serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;     /* 見出し（明朝） */
-  --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;  /* 本文（ゴシック） */
-  --latin: "Cormorant Garamond", "Shippori Mincho", serif;                  /* 英字見出し・日付 */
+  --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;   /* 見出し（明朝） */
+  --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "YuGothic", "Meiryo", "Noto Sans JP", sans-serif;  /* 本文（ゴシック） */
+  --latin: "Cormorant Garamond", "Hiragino Mincho ProN", "Yu Mincho", serif;  /* 英字見出し・日付 */
 }
 
 /* 端末がダークモードのときは自動で暗い配色に */
@@ -49,7 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 [hidden] { display: none !important; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
@@ -85,6 +86,17 @@ a { color: inherit; }
 }
 .gnav a:hover { background: var(--acc-soft); color: var(--ink); }
 .gnav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+
+/* 言語切り替え（右端の小さなボタン） */
+.site-header__inner { position: relative; }
+.gnav { margin-left: auto; }
+.lang {
+  flex: none; text-decoration: none; font-family: var(--latin); font-weight: 600; font-size: 15px;
+  letter-spacing: .08em; line-height: 1; color: var(--sub);
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px 5px;
+  transition: color .2s, border-color .2s;
+}
+.lang:hover { color: var(--ink); border-color: var(--sub); }
 
 /* =========================================================
    プロフィール（文章と写真を横並び）
@@ -245,6 +257,7 @@ html[lang="en"] body { letter-spacing: 0; }
   .wrap { padding: 0 18px; }
   .site-header__inner { flex-direction: column; align-items: stretch; gap: 8px; padding: 10px 18px 8px; }
   .site-title { font-size: 17px; }
+  .lang { position: absolute; top: 9px; right: 18px; font-size: 14px; padding: 5px 10px 4px; }
   .gnav { overflow-x: auto; margin: 0 -18px; padding: 0 18px 2px; scrollbar-width: none; }
   .gnav::-webkit-scrollbar { display: none; }
   .gnav a { padding: 6px 12px; font-size: 13px; }
