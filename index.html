@@ -16,63 +16,67 @@
 </head>
 <body id="top">
 
-  <header class="hero">
-    <h1><a href="index.html">岩間裕司のページ</a></h1>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-title" href="index.html">岩間裕司<span>のページ</span></a>
+      <nav class="gnav" aria-label="サイト内メニュー">
+      <a href="index.html" aria-current="page">ホーム</a>
+      <a href="metacognition.html">メタ認知による不安調整とは？</a>
+      <a href="sotsuken/">卒業研究ガイド</a>
+      </nav>
+    </div>
   </header>
-  <nav class="gnav">
-    <a href="index.html" aria-current="page">ホーム</a>
-    <a href="metacognition.html">メタ認知による<br>不安調整とは？</a>
-    <a href="sotsuken/">卒業研究<br>ガイド</a>
-  </nav>
 
   <main class="wrap">
 
     <!-- ========== プロフィール（ここは直接書き換え） ========== -->
-    <div class="profile">
-      <span class="label">プロフィール</span>
-      <p class="name">岩間裕司<br>知識科学博士／看護師・保健師</p>
+    <section class="intro">
+      <div class="profile">
+        <span class="label">Profile</span>
+        <h1 class="name">岩間 裕司</h1>
+        <p class="role">知識科学博士／看護師・保健師</p>
 
-      <p>
-        防衛医科大学校<br>
-        医学教育部 看護学科 地域・在宅看護学講座　講師<br>
-        研究キーワード：メタ認知、インストラクショナルデザイン、構成的学習、知識科学
-      </p>
-      <p>
-        慶應義塾大学看護医療学部卒(2012).<br>
-        北陸先端科学技術大学院大学博士後期課程修了.<br>
-        慶應義塾大学病院 集中治療室・泌尿器科・化学療法病床にて看護師として約10年勤務.<br>
-        てとめ訪問看護ステーション江戸川を経て現職.
-      </p>
-      <p>「看護師の優れた暗黙知」をどうしたら他の看護師と共有し、学習可能な形にできるか？そしてそれをどう評価するか？に関心があります.</p>
-      <p>趣味はバイク（Kawasaki・ベスパ・BMW）、ラーメン、読書、靴磨き</p>
+        <p class="affil">
+          <strong>防衛医科大学校</strong><br>
+          医学教育部 看護学科 地域・在宅看護学講座　講師
+          <span class="kw">研究キーワード：メタ認知、インストラクショナルデザイン、構成的学習、知識科学</span>
+        </p>
 
-      <!-- ↓ researchmapのご自身のURLに置き換えてください -->
-      <a class="btn" href="https://researchmap.jp/yujiwa" target="_blank" rel="noopener">詳しくはこちら</a>
-    </div>
+        <p class="interest">「看護師の優れた暗黙知」をどうしたら他の看護師と共有し、学習可能な形にできるか？そしてそれをどう評価するか？に関心があります。</p>
 
-    <div class="photos">
-      <img src="images/profile.jpg" alt="岩間裕司">
-      <img src="images/pooaru.jpg" alt="愛犬ぷーある">
-    </div>
-    <p class="caption">私と愛犬（ぷーある）</p>
+        <p class="career">
+          慶應義塾大学看護医療学部卒（2012）。<br>
+          北陸先端科学技術大学院大学 博士後期課程修了。<br>
+          慶應義塾大学病院 集中治療室・泌尿器科・化学療法病床にて看護師として約10年勤務。<br>
+          てとめ訪問看護ステーション江戸川を経て現職。
+        </p>
+        <p class="hobby">趣味はバイク（Kawasaki・ベスパ・BMW）、ラーメン、読書、靴磨き</p>
+
+        <!-- ↓ researchmapのご自身のURLに置き換えてください -->
+        <a class="btn" href="https://researchmap.jp/yujiwa" target="_blank" rel="noopener">researchmapで詳しく見る</a>
+      </div>
+
+      <figure class="photos">
+        <img src="images/profile.jpg" alt="岩間裕司">
+        <img src="images/pooaru.jpg" alt="愛犬ぷーある">
+        <figcaption>私と愛犬（ぷーある）</figcaption>
+      </figure>
+    </section>
 
     <!-- ========== 以下の中身は content.js で編集 ========== -->
     <section class="block">
-      <h2>News</h2>
-      <p class="sub">お知らせ</p>
+      <div class="block-head"><h2>News</h2><p class="sub">お知らせ</p></div>
       <ul class="news" id="news-top"></ul>
       <a class="more" id="past-link" href="news.html">過去のお知らせ</a>
     </section>
 
     <section class="block">
-      <h2>Project</h2>
-      <p class="sub">研究テーマ</p>
+      <div class="block-head"><h2>Project</h2><p class="sub">研究テーマ</p></div>
       <div class="cards" id="projects"></div>
     </section>
 
     <section class="block">
-      <h2>Portfolio</h2>
-      <p class="sub">成果物等</p>
+      <div class="block-head"><h2>Portfolio</h2><p class="sub">成果物等</p></div>
       <div class="cards" id="portfolio"></div>
     </section>
 
