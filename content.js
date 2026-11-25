@@ -82,7 +82,7 @@ const PORTFOLIO = [
   {
     image: "images/portfolio-kanrenzu.jpg",
     title: "関連図作成支援ツール（試作）",
-    body: "看護学生・新人看護師にとって壁である関連図。患者さんの全体像を把握しつつ、適切な観察やケアが行えるようにどう考えたらいいか、PESをベースに作成を支援します。<br><small>＊現在PCのみ対応</small>",
+    body: "看護学生・新人看護師にとって壁である関連図。患者さんの全体像を把握しつつ、適切な観察やケアが行えるようにどう考えたらいいか、PESをベースに作成を支援します。<br><small>＊今後一般公開予定</small>",
     link: "", // 一時的にリンク削除。復活させるときは "https://logi-map.pages.dev/" に戻す
     linkLabel: "ツールを開く", 
   },
