@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://yujiwa.pages.dev/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yujiwa.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yujiwa.pages.dev/en"/>
+  </url>
+  <url>
+    <loc>https://yujiwa.pages.dev/en</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yujiwa.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yujiwa.pages.dev/en"/>
+  </url>
+  <url>
+    <loc>https://yujiwa.pages.dev/metacognition</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://yujiwa.pages.dev/news</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+</urlset>
