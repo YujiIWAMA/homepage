@@ -1,5 +1,5 @@
-/* フォント：日本語は端末に入っている明朝・ゴシックを使う（表示を速くするため）．
-   英字見出し用の Cormorant Garamond だけ各HTMLの <head> で読み込み */
+/* フォント：日本語は Shippori Mincho（明朝）と Zen Kaku Gothic New（ゴシック），
+   英字見出しは Cormorant Garamond．いずれも各HTMLの <head> で Google Fonts から読み込み */
 
 /* =========================================================
    色とサイズ（ここを変えれば全体の雰囲気が変わります）
@@ -16,9 +16,9 @@
   --shadow: 0 1px 2px rgba(40, 36, 28, .05), 0 6px 20px rgba(40, 36, 28, .06);
   --max: 1040px;        /* ヘッダー・カード並びの最大幅 */
   --read: 720px;        /* 読み物の行の最大幅 */
-  --serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;   /* 見出し（明朝） */
-  --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "YuGothic", "Meiryo", "Noto Sans JP", sans-serif;  /* 本文（ゴシック） */
-  --latin: "Cormorant Garamond", "Hiragino Mincho ProN", "Yu Mincho", serif;  /* 英字見出し・日付 */
+  --serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;   /* 見出し（明朝） */
+  --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "YuGothic", "Meiryo", sans-serif;  /* 本文（ゴシック） */
+  --latin: "Cormorant Garamond", "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;  /* 英字見出し・日付 */
 }
 
 /* 端末がダークモードのときは自動で暗い配色に */
